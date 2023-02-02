@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Press Start 2P", cursive;
+  background-color: #222;
+  color: white;
+}
+
+button {
+  font-family: inherit;
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+}
+
+#heading {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 8rem;
+}
+
+h1 {
+  font-size: 3rem;
+  padding-bottom: 3rem;
+}
+
+header div {
+  height: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+#secret_number {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 6rem;
+  padding: 1rem 4rem;
+  background-color: white;
+  border: none;
+  color: #222;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#right {
+  margin-bottom: 5rem;
+}
+
+#number {
+  font-family: inherit;
+  text-align: center;
+  font-size: 4rem;
+  padding: 1rem 0;
+  background-color: #222;
+  color: white;
+  border: solid;
+}
+
+#check {
+  font-family: inherit;
+  font-size: 1rem;
+  margin: 1rem;
+  padding: 1rem;
+}
