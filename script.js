@@ -30,6 +30,7 @@ function guess() {
     win = true;
 
     if (score > highscore) {
+      highscore = score;
       document.getElementById("highscore").textContent = score;
     }
   } else {
@@ -59,6 +60,7 @@ function repeat() {
   document.querySelector("#score").textContent = score;
   document.querySelector("#message").textContent = "Start guessing...";
   secretNumber = Math.trunc(Math.random() * 20 + 1);
+  win = false;
 }
 
 check.addEventListener("click", guess);
