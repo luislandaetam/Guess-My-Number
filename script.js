@@ -5,6 +5,7 @@ let highscore = 0;
 
 let check = document.getElementById("check");
 let again = document.getElementById("again");
+let win = false;
 
 function displayMessage(message) {
   document.getElementById("message").textContent = message;
@@ -12,7 +13,7 @@ function displayMessage(message) {
 
 function guess() {
   let number = Number(document.getElementById("number").value);
-  if (score === 0) {
+  if (score === 0 || win) {
     return displayMessage("🕹️ Please, reset the game!");
   }
 
@@ -26,6 +27,7 @@ function guess() {
     displayMessage("🥳 You nailed it!");
     document.querySelector("body").style.backgroundColor = "#60b347";
     document.getElementById("number").style.backgroundColor = "#60b347";
+    win = true;
 
     if (score > highscore) {
       document.getElementById("highscore").textContent = score;
@@ -53,7 +55,8 @@ function repeat() {
   document.querySelector("#number").value = "";
   document.querySelector("#secret_number").textContent = "?";
   document.querySelector("#secret_number").style.padding = "1rem 4rem";
-  document.querySelector("#score").textContent = "20";
+  score = 20;
+  document.querySelector("#score").textContent = score;
   document.querySelector("#message").textContent = "Start guessing...";
   secretNumber = Math.trunc(Math.random() * 20 + 1);
 }
